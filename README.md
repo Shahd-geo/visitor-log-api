@@ -17,7 +17,7 @@ Data is stored in memory using a Java List, which means all data is lost when th
 | GET | /api/visitors/count | Get total visitors |
 | GET | /api/health | Health check |
 
-### Bonus
+## Bonus Endpoints
 
 | Method | Endpoint |
 |----------|----------|
@@ -28,6 +28,13 @@ Data is stored in memory using a Java List, which means all data is lost when th
 
 ```bash
 mvn spring-boot:run
+```
+
+## Run with Docker
+
+```bash
+docker build -t visitor-log:1.0 .
+docker run -d -p 8080:8080 --name visitorlog visitor-log:1.0
 ```
 
 ## Developer
